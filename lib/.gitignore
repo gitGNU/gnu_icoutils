@@ -44,14 +44,12 @@
 /printf-parse.h
 /progname.c
 /progname.h
-/realloc.c
 /size_max.h
 /stat.c
 /stdarg.in.h
 /stdbool.in.h
 /stddef.in.h
 /stdint.in.h
-/stdio.c
 /stdio.in.h
 /stdlib.in.h
 /str-two-way.h
@@ -91,3 +89,6 @@
 /xstrndup.h
 /xvasprintf.c
 /xvasprintf.h
+/getprogname.c
+/getprogname.h
+/limits.in.h

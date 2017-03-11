@@ -1,5 +1,5 @@
 # DO NOT EDIT! GENERATED AUTOMATICALLY!
-# Copyright (C) 2002-2012 Free Software Foundation, Inc.
+# Copyright (C) 2002-2017 Free Software Foundation, Inc.
 #
 # This file is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -37,8 +37,14 @@ AC_DEFUN([gl_EARLY],
   m4_pattern_allow([^gl_ES$])dnl a valid locale name
   m4_pattern_allow([^gl_LIBOBJS$])dnl a variable
   m4_pattern_allow([^gl_LTLIBOBJS$])dnl a variable
+
+  # Pre-early section.
+  AC_REQUIRE([gl_USE_SYSTEM_EXTENSIONS])
   AC_REQUIRE([gl_PROG_AR_RANLIB])
+
+  # Code from module absolute-header:
   # Code from module alloca-opt:
+  # Code from module builtin-expect:
   # Code from module byteswap:
   # Code from module configmake:
   # Code from module dirname:
@@ -50,13 +56,13 @@ AC_DEFUN([gl_EARLY],
   # Code from module error:
   # Code from module exitfail:
   # Code from module extensions:
-  AC_REQUIRE([gl_USE_SYSTEM_EXTENSIONS])
   # Code from module extern-inline:
   # Code from module float:
   # Code from module getdelim:
   # Code from module getline:
   # Code from module getopt-gnu:
   # Code from module getopt-posix:
+  # Code from module getprogname:
   # Code from module gettext:
   # Code from module gettext-h:
   # Code from module gettimeofday:
@@ -65,9 +71,11 @@ AC_DEFUN([gl_EARLY],
   # Code from module intprops:
   # Code from module largefile:
   AC_REQUIRE([AC_SYS_LARGEFILE])
+  # Code from module limits-h:
   # Code from module lstat:
   # Code from module malloc-gnu:
   # Code from module malloc-posix:
+  # Code from module manywarnings:
   # Code from module memchr:
   # Code from module minmax:
   # Code from module msvc-inval:
@@ -76,7 +84,6 @@ AC_DEFUN([gl_EARLY],
   # Code from module nocrash:
   # Code from module pathmax:
   # Code from module progname:
-  # Code from module realloc-posix:
   # Code from module size_max:
   # Code from module snippet/_Noreturn:
   # Code from module snippet/arg-nonnull:
@@ -114,6 +121,7 @@ AC_DEFUN([gl_EARLY],
   # Code from module vasprintf:
   # Code from module verify:
   # Code from module version-etc:
+  # Code from module warnings:
   # Code from module wchar:
   # Code from module xalloc:
   # Code from module xalloc-die:
@@ -140,6 +148,7 @@ AC_DEFUN([gl_INIT],
   gl_COMMON
   gl_source_base='lib'
   gl_FUNC_ALLOCA
+  gl___BUILTIN_EXPECT
   gl_BYTESWAP
   gl_CONFIGMAKE_PREP
   gl_DIRNAME
@@ -190,7 +199,6 @@ AC_DEFUN([gl_INIT],
     GNULIB_GL_UNISTD_H_GETOPT=1
   fi
   AC_SUBST([GNULIB_GL_UNISTD_H_GETOPT])
-  gl_MODULE_INDICATOR_FOR_TESTS([getopt-gnu])
   gl_FUNC_GETOPT_POSIX
   if test $REPLACE_GETOPT = 1; then
     AC_LIBOBJ([getopt])
@@ -200,6 +208,7 @@ AC_DEFUN([gl_INIT],
     GNULIB_GL_UNISTD_H_GETOPT=1
   fi
   AC_SUBST([GNULIB_GL_UNISTD_H_GETOPT])
+  gl_FUNC_GETPROGNAME
   dnl you must add AM_GNU_GETTEXT([external]) or similar to configure.ac.
   AM_GNU_GETTEXT_VERSION([0.18.1])
   AC_SUBST([LIBINTL])
@@ -211,6 +220,7 @@ AC_DEFUN([gl_INIT],
   fi
   gl_SYS_TIME_MODULE_INDICATOR([gettimeofday])
   AC_REQUIRE([gl_LARGEFILE])
+  gl_LIMITS_H
   gl_FUNC_LSTAT
   if test $REPLACE_LSTAT = 1; then
     AC_LIBOBJ([lstat])
@@ -234,11 +244,11 @@ AC_DEFUN([gl_INIT],
   fi
   gl_STRING_MODULE_INDICATOR([memchr])
   gl_MINMAX
-  gl_MSVC_INVAL
+  AC_REQUIRE([gl_MSVC_INVAL])
   if test $HAVE_MSVC_INVALID_PARAMETER_HANDLER = 1; then
     AC_LIBOBJ([msvc-inval])
   fi
-  gl_MSVC_NOTHROW
+  AC_REQUIRE([gl_MSVC_NOTHROW])
   if test $HAVE_MSVC_INVALID_PARAMETER_HANDLER = 1; then
     AC_LIBOBJ([msvc-nothrow])
   fi
@@ -246,11 +256,6 @@ AC_DEFUN([gl_INIT],
   gl_PATHMAX
   AC_CHECK_DECLS([program_invocation_name], [], [], [#include <errno.h>])
   AC_CHECK_DECLS([program_invocation_short_name], [], [], [#include <errno.h>])
-  gl_FUNC_REALLOC_POSIX
-  if test $REPLACE_REALLOC = 1; then
-    AC_LIBOBJ([realloc])
-  fi
-  gl_STDLIB_MODULE_INDICATOR([realloc-posix])
   gl_SIZE_MAX
   gt_TYPE_SSIZE_T
   gl_FUNC_STAT
@@ -506,10 +511,13 @@ AC_DEFUN([gl_FILE_LIST], [
   lib/getopt.in.h
   lib/getopt1.c
   lib/getopt_int.h
+  lib/getprogname.c
+  lib/getprogname.h
   lib/gettext.h
   lib/gettimeofday.c
   lib/intprops.h
   lib/itold.c
+  lib/limits.in.h
   lib/lstat.c
   lib/malloc.c
   lib/memchr.c
@@ -526,14 +534,12 @@ AC_DEFUN([gl_FILE_LIST], [
   lib/printf-parse.h
   lib/progname.c
   lib/progname.h
-  lib/realloc.c
   lib/size_max.h
   lib/stat.c
   lib/stdarg.in.h
   lib/stdbool.in.h
   lib/stddef.in.h
   lib/stdint.in.h
-  lib/stdio.c
   lib/stdio.in.h
   lib/stdlib.in.h
   lib/str-two-way.h
@@ -574,7 +580,9 @@ AC_DEFUN([gl_FILE_LIST], [
   lib/xvasprintf.c
   lib/xvasprintf.h
   m4/00gnulib.m4
+  m4/absolute-header.m4
   m4/alloca.m4
+  m4/builtin-expect.m4
   m4/byteswap.m4
   m4/codeset.m4
   m4/configmake.m4
@@ -591,6 +599,7 @@ AC_DEFUN([gl_FILE_LIST], [
   m4/getdelim.m4
   m4/getline.m4
   m4/getopt.m4
+  m4/getprogname.m4
   m4/gettext.m4
   m4/gettimeofday.m4
   m4/glibc2.m4
@@ -611,10 +620,12 @@ AC_DEFUN([gl_FILE_LIST], [
   m4/lib-ld.m4
   m4/lib-link.m4
   m4/lib-prefix.m4
+  m4/limits-h.m4
   m4/lock.m4
   m4/longlong.m4
   m4/lstat.m4
   m4/malloc.m4
+  m4/manywarnings.m4
   m4/math_h.m4
   m4/memchr.m4
   m4/minmax.m4
@@ -631,7 +642,6 @@ AC_DEFUN([gl_FILE_LIST], [
   m4/printf-posix.m4
   m4/printf.m4
   m4/progtest.m4
-  m4/realloc.m4
   m4/size_max.m4
   m4/ssize_t.m4
   m4/stat.m4
@@ -663,6 +673,7 @@ AC_DEFUN([gl_FILE_LIST], [
   m4/version-etc.m4
   m4/visibility.m4
   m4/warn-on-use.m4
+  m4/warnings.m4
   m4/wchar_h.m4
   m4/wchar_t.m4
   m4/wint_t.m4
