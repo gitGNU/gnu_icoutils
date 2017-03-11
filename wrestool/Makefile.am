@@ -13,7 +13,7 @@ wrestool_SOURCES = \
 wrestool_LDADD = \
   ../common/libcommon.a \
   ../lib/libgnu.a \
-  @INTLLIBS@
+  @LIBINTL@
 
 man_MANS = \
   wrestool.1

@@ -15,7 +15,7 @@ icotool_LDADD = \
   @PNG_LIBS@ \
   ../common/libcommon.a \
   ../lib/libgnu.a \
-  @INTLLIBS@
+  @LIBINTL@
 
 man_MANS = \
   icotool.1
