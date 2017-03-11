@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: icoutils 0.31.2\n"
+"Project-Id-Version: icoutils 0.31.3\n"
 "Report-Msgid-Bugs-To: frank.richter@gmail.com\n"
-"POT-Creation-Date: 2017-03-06 22:34+0100\n"
+"POT-Creation-Date: 2017-03-11 14:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,61 +17,66 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: lib/error.c:188
+#: lib/error.c:191
 msgid "Unknown system error"
 msgstr ""
 
-#: lib/getopt.c:547 lib/getopt.c:576
+#: lib/getopt.c:575 lib/getopt.c:604
 #, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
 msgstr ""
 
-#: lib/getopt.c:624 lib/getopt.c:628
+#: lib/getopt.c:619
+#, c-format
+msgid "%s: option '%s' is ambiguous\n"
+msgstr ""
+
+#: lib/getopt.c:654 lib/getopt.c:658
 #, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
 msgstr ""
 
-#: lib/getopt.c:637 lib/getopt.c:642
+#: lib/getopt.c:667 lib/getopt.c:672
 #, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
 msgstr ""
 
-#: lib/getopt.c:685 lib/getopt.c:704
+#: lib/getopt.c:715 lib/getopt.c:734
 #, c-format
 msgid "%s: option '--%s' requires an argument\n"
 msgstr ""
 
-#: lib/getopt.c:742 lib/getopt.c:745
+#: lib/getopt.c:772 lib/getopt.c:775
 #, c-format
 msgid "%s: unrecognized option '--%s'\n"
 msgstr ""
 
-#: lib/getopt.c:753 lib/getopt.c:756
+#: lib/getopt.c:783 lib/getopt.c:786
 #, c-format
 msgid "%s: unrecognized option '%c%s'\n"
 msgstr ""
 
-#: lib/getopt.c:805 lib/getopt.c:808
+#: lib/getopt.c:835 lib/getopt.c:838
 #, c-format
 msgid "%s: invalid option -- '%c'\n"
 msgstr ""
 
-#: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
+#: lib/getopt.c:891 lib/getopt.c:908 lib/getopt.c:1118 lib/getopt.c:1136
 #, c-format
 msgid "%s: option requires an argument -- '%c'\n"
 msgstr ""
 
-#: lib/getopt.c:934 lib/getopt.c:950
+#: lib/getopt.c:964 lib/getopt.c:980
 #, c-format
 msgid "%s: option '-W %s' is ambiguous\n"
 msgstr ""
 
-#: lib/getopt.c:974 lib/getopt.c:992
+#: lib/getopt.c:1004 lib/getopt.c:1022
 #, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
 msgstr ""
 
-#: lib/getopt.c:1013 lib/getopt.c:1031
+#: lib/getopt.c:1043 lib/getopt.c:1061
 #, c-format
 msgid "%s: option '-W %s' requires an argument\n"
 msgstr ""
@@ -243,70 +248,72 @@ msgstr ""
 msgid "Called iterator_remove before first iterator_next"
 msgstr ""
 
-#: icotool/create.c:60 icotool/extract.c:66
+#: icotool/create.c:60 icotool/extract.c:67
 msgid "cannot read file"
 msgstr ""
 
-#: icotool/create.c:62 icotool/extract.c:68
+#: icotool/create.c:62 icotool/extract.c:69
 msgid "premature end"
 msgstr ""
 
-#: icotool/create.c:112
+#: icotool/create.c:113
 msgid "cannot open file"
 msgstr ""
 
-#: icotool/create.c:119
+#: icotool/create.c:120
 msgid "not a png file"
 msgstr ""
 
-#: icotool/create.c:125 icotool/extract.c:289 icotool/extract.c:465
+#: icotool/create.c:126 icotool/extract.c:289 icotool/extract.c:464
 msgid "cannot initialize PNG library"
 msgstr ""
 
-#: icotool/create.c:130 icotool/extract.c:294 icotool/extract.c:470
+#: icotool/create.c:131 icotool/extract.c:294 icotool/extract.c:469
 msgid "cannot create PNG info structure - out of memory"
 msgstr ""
 
-#: icotool/create.c:243
+#: icotool/create.c:244
 #, c-format
 msgid "cannot decrease bit depth from %d to %d, bit depth not changed"
 msgstr ""
 
-#: icotool/create.c:258 icotool/extract.c:199 icotool/extract.c:304
+#: icotool/create.c:259 icotool/extract.c:199 icotool/extract.c:303
 msgid "cannot create file"
 msgstr ""
 
-#: icotool/create.c:267 icotool/create.c:309 icotool/create.c:319
-#: icotool/create.c:393 icotool/extract.c:207
+#: icotool/create.c:268 icotool/create.c:310 icotool/create.c:320
+#: icotool/create.c:394 icotool/extract.c:207
 msgid "cannot write to file"
 msgstr ""
 
-#: icotool/extract.c:85
+#: icotool/extract.c:86
 msgid "read error"
 msgstr ""
 
-#: icotool/extract.c:113
+#: icotool/extract.c:114
 msgid "not an icon or cursor file (reserved non-zero)"
 msgstr ""
 
-#: icotool/extract.c:117
+#: icotool/extract.c:118
 msgid "not an icon or cursor file (wrong type)"
 msgstr ""
 
-#: icotool/extract.c:127
+#: icotool/extract.c:128
 msgid "reserved is not zero"
 msgstr ""
 
-#: icotool/extract.c:172
+#: icotool/extract.c:173
 msgid "PNG too large"
 msgstr ""
 
-#: icotool/extract.c:186 icotool/extract.c:355
+#: icotool/extract.c:187 icotool/extract.c:354
 #, c-format
-msgid "--%s --index=%d --width=%d --height=%d --bit-depth=%d --palette-size=%d"
+msgid ""
+"--%s --index=%d --width=%d --height=%d --bit-depth=%<PRIu32> --palette-size="
+"%<PRIu32>"
 msgstr ""
 
-#: icotool/extract.c:190 icotool/extract.c:359
+#: icotool/extract.c:191 icotool/extract.c:358
 #, c-format
 msgid " --hotspot-x=%d --hotspot-y=%d"
 msgstr ""
@@ -353,15 +360,15 @@ msgstr ""
 msgid "incorrect total size of bitmap (%d specified; %d real)"
 msgstr ""
 
-#: icotool/extract.c:408
+#: icotool/extract.c:407
 msgid "offset of bitmap header incorrect (too low)"
 msgstr ""
 
-#: icotool/extract.c:412
+#: icotool/extract.c:411
 msgid "invalid data at expected offset (unrecoverable)"
 msgstr ""
 
-#: icotool/extract.c:415
+#: icotool/extract.c:414
 #, c-format
 msgid "skipping %u bytes of garbage at %u"
 msgstr ""
@@ -370,213 +377,213 @@ msgstr ""
 msgid "refusing to write binary data to terminal"
 msgstr ""
 
-#: icotool/main.c:125 icotool/main.c:156
+#: icotool/main.c:125 icotool/main.c:154
 msgid "(standard out)"
 msgstr ""
 
-#: icotool/main.c:167 wrestool/main.c:183
+#: icotool/main.c:165 wrestool/main.c:183
 #, c-format
 msgid "Usage: %s [OPTION]... [FILE]...\n"
 msgstr ""
 
-#: icotool/main.c:168
+#: icotool/main.c:166
 #, c-format
 msgid "Convert and create Win32 icon (.ico) and cursor (.cur) files.\n"
 msgstr ""
 
-#: icotool/main.c:169 wrestool/main.c:185
+#: icotool/main.c:167 wrestool/main.c:185
 #, c-format
 msgid ""
 "\n"
 "Commands:\n"
 msgstr ""
 
-#: icotool/main.c:170
+#: icotool/main.c:168
 #, c-format
 msgid "  -x, --extract                extract images from files\n"
 msgstr ""
 
-#: icotool/main.c:171
+#: icotool/main.c:169
 #, c-format
 msgid "  -l, --list                   print a list of images in files\n"
 msgstr ""
 
-#: icotool/main.c:172
+#: icotool/main.c:170
 #, c-format
 msgid ""
 "  -c, --create                 create an icon file from specified files\n"
 msgstr ""
 
-#: icotool/main.c:173
+#: icotool/main.c:171
 #, c-format
 msgid "      --help                   display this help and exit\n"
 msgstr ""
 
-#: icotool/main.c:174
+#: icotool/main.c:172
 #, c-format
 msgid "      --version                output version information and exit\n"
 msgstr ""
 
-#: icotool/main.c:175
+#: icotool/main.c:173
 #, c-format
 msgid ""
 "\n"
 "Options:\n"
 msgstr ""
 
-#: icotool/main.c:176
+#: icotool/main.c:174
 #, c-format
 msgid "  -i, --index=NUMBER           match index of image (first is 1)\n"
 msgstr ""
 
-#: icotool/main.c:177
+#: icotool/main.c:175
 #, c-format
 msgid "  -w, --width=PIXELS           match width of image\n"
 msgstr ""
 
-#: icotool/main.c:178
+#: icotool/main.c:176
 #, c-format
 msgid "  -h, --height=PIXELS          match height of image\n"
 msgstr ""
 
-#: icotool/main.c:179
+#: icotool/main.c:177
 #, c-format
 msgid ""
 "  -p, --palette-size=COUNT     match number of colors in palette (or 0)\n"
 msgstr ""
 
-#: icotool/main.c:180
+#: icotool/main.c:178
 #, c-format
 msgid "  -b, --bit-depth=COUNT        match or set number of bits per pixel\n"
 msgstr ""
 
-#: icotool/main.c:182
+#: icotool/main.c:180
 #, c-format
 msgid ""
 "  -X, --hotspot-x=COORD        match or set cursor hotspot x-coordinate\n"
 msgstr ""
 
-#: icotool/main.c:183
+#: icotool/main.c:181
 #, c-format
 msgid ""
 "  -Y, --hotspot-y=COORD        match or set cursor hotspot y-coordinate\n"
 msgstr ""
 
-#: icotool/main.c:184
+#: icotool/main.c:182
 #, c-format
 msgid ""
 "  -t, --alpha-threshold=LEVEL  highest level in alpha channel indicating\n"
 "                               transparent image portions (default is 127)\n"
 msgstr ""
 
-#: icotool/main.c:186
+#: icotool/main.c:184
 #, c-format
 msgid ""
 "  -r, --raw=FILENAME           store input file as raw PNG (\"Vista icons"
 "\")\n"
 msgstr ""
 
-#: icotool/main.c:187
+#: icotool/main.c:185
 #, c-format
 msgid "      --icon                   match icons only\n"
 msgstr ""
 
-#: icotool/main.c:188
+#: icotool/main.c:186
 #, c-format
 msgid "      --cursor                 match cursors only\n"
 msgstr ""
 
-#: icotool/main.c:189
+#: icotool/main.c:187
 #, c-format
 msgid "  -o, --output=PATH            where to place extracted files\n"
 msgstr ""
 
-#: icotool/main.c:190
+#: icotool/main.c:188
 #, c-format
 msgid "\n"
 msgstr ""
 
-#: icotool/main.c:191
+#: icotool/main.c:189
 #, c-format
 msgid "Report bugs to <%s>.\n"
 msgstr ""
 
-#: icotool/main.c:227 wrestool/main.c:216
+#: icotool/main.c:225 wrestool/main.c:216
 #, c-format
 msgid "%s: cannot set locale: %s"
 msgstr ""
 
-#: icotool/main.c:229 wrestool/main.c:218
+#: icotool/main.c:227 wrestool/main.c:218
 #, c-format
 msgid "%s: bindtextdomain failed: %s"
 msgstr ""
 
-#: icotool/main.c:231 wrestool/main.c:220
+#: icotool/main.c:229 wrestool/main.c:220
 #, c-format
 msgid "%s: cannot set message domain: %s"
 msgstr ""
 
-#: icotool/main.c:256
+#: icotool/main.c:254
 #, c-format
 msgid "invalid index value: %s"
 msgstr ""
 
-#: icotool/main.c:260
+#: icotool/main.c:258
 #, c-format
 msgid "invalid width value: %s"
 msgstr ""
 
-#: icotool/main.c:264
+#: icotool/main.c:262
 #, c-format
 msgid "invalid height value: %s"
 msgstr ""
 
-#: icotool/main.c:268
+#: icotool/main.c:266
 #, c-format
 msgid "invalid palette-size value: %s"
 msgstr ""
 
-#: icotool/main.c:272
+#: icotool/main.c:270
 #, c-format
 msgid "invalid bit-depth value: %s"
 msgstr ""
 
-#: icotool/main.c:280
+#: icotool/main.c:278
 #, c-format
 msgid "invalid hotspot-x value: %s"
 msgstr ""
 
-#: icotool/main.c:285
+#: icotool/main.c:283
 #, c-format
 msgid "invalid hotspot-y value: %s"
 msgstr ""
 
-#: icotool/main.c:290
+#: icotool/main.c:288
 #, c-format
 msgid "invalid alpha-threshold value: %s"
 msgstr ""
 
-#: icotool/main.c:309
+#: icotool/main.c:307
 msgid "multiple commands specified"
 msgstr ""
 
-#: icotool/main.c:311
+#: icotool/main.c:309
 msgid "missing argument"
 msgstr ""
 
-#: icotool/main.c:316
+#: icotool/main.c:314
 msgid "only one of --icon and --cursor may be specified"
 msgstr ""
 
-#: icotool/main.c:320
+#: icotool/main.c:318
 msgid "missing file argument"
 msgstr ""
 
-#: icotool/main.c:333 icotool/main.c:352
+#: icotool/main.c:331 icotool/main.c:350
 msgid "missing arguments"
 msgstr ""
 
-#: icotool/main.c:343
+#: icotool/main.c:341
 #, c-format
 msgid "%s: no images matched\n"
 msgstr ""
@@ -586,22 +593,22 @@ msgstr ""
 msgid "%s: don't know how to extract resource, try `--raw'"
 msgstr ""
 
-#: wrestool/extract.c:161 wrestool/extract.c:208
+#: wrestool/extract.c:162 wrestool/extract.c:209
 #, c-format
 msgid "%s: could not find `%s' in `%s' resource."
 msgstr ""
 
-#: wrestool/extract.c:168
+#: wrestool/extract.c:169
 #, c-format
 msgid "%s: icon resource `%s' is empty, skipping"
 msgstr ""
 
-#: wrestool/extract.c:173
+#: wrestool/extract.c:174
 #, c-format
 msgid "%s: mismatch of size in icon resource `%s' and group (%d vs %d)"
 msgstr ""
 
-#: wrestool/fileread.c:47
+#: wrestool/fileread.c:48
 #, c-format
 msgid "%s: premature end"
 msgstr ""
@@ -719,31 +726,31 @@ msgstr ""
 msgid "%s: --language has no effect because file is 16-bit binary"
 msgstr ""
 
-#: wrestool/restable.c:132
+#: wrestool/restable.c:129
 #, c-format
-msgid "--type=%s --name=%s%s%s [%s%s%soffset=0x%x size=%d]\n"
+msgid "--type=%s --name=%s%s%s [%s%s%soffset=0x%x size=%zu]\n"
 msgstr ""
 
-#: wrestool/restable.c:135
+#: wrestool/restable.c:132
 msgid " --language="
 msgstr ""
 
-#: wrestool/restable.c:329
+#: wrestool/restable.c:326
 #, c-format
 msgid "%s: resource table invalid, ignoring remaining entries"
 msgstr ""
 
-#: wrestool/restable.c:395 wrestool/restable.c:478
+#: wrestool/restable.c:392 wrestool/restable.c:475
 #, c-format
 msgid "%s: not a PE or NE library"
 msgstr ""
 
-#: wrestool/restable.c:412
+#: wrestool/restable.c:409
 #, c-format
 msgid "%s: no resource directory found"
 msgstr ""
 
-#: wrestool/restable.c:468
+#: wrestool/restable.c:465
 #, c-format
 msgid "%s: file contains no resources"
 msgstr ""
