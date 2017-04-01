@@ -92,6 +92,12 @@ do_resources_recurs (WinLibrary *fi, WinResource *base, WinResource *type_wr,
 	for (c = 0 ; c < rescnt ; c++) {
 		/* (over)write the corresponding WinResource holder with the current */
 		memcpy(WINRESOURCE_BY_LEVEL(wr[c].level), wr+c, sizeof(WinResource));
+		if ((base && (wr[c].level <= base->level))
+			|| (wr[c].level >= 3))
+		{
+			warn(_("%s: resource structure malformed"), fi->name);
+			return;
+		}
 
 		/* go deeper unless there is something that does NOT match */
 		if (LEVEL_MATCHES(type) && LEVEL_MATCHES(name) && LEVEL_MATCHES(lang)) {
