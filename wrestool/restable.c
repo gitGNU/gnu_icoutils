@@ -258,29 +258,36 @@ static WinResource *
 list_pe_resources (WinLibrary *fi, Win32ImageResourceDirectory *pe_res, int level, int *count)
 {
 	WinResource *wr;
-	int c, rescnt;
+	int out_c, dirent_c, rescnt;
 	Win32ImageResourceDirectoryEntry *dirent
 	  = (Win32ImageResourceDirectoryEntry *) (pe_res + 1);
 
 	/* count number of `type' resources */
 	RETURN_IF_BAD_POINTER(NULL, *dirent);
 	rescnt = pe_res->number_of_named_entries + pe_res->number_of_id_entries;
-	*count = rescnt;
+	*count = 0;
 
 	/* allocate WinResource's */
 	wr = xmalloc(sizeof(WinResource) * rescnt);
 
 	/* fill in the WinResource's */
-	for (c = 0 ; c < rescnt ; c++) {
-		RETURN_IF_BAD_POINTER(NULL, dirent[c]);
-		wr[c].this = pe_res;
-		wr[c].level = level;
-		wr[c].is_directory = (dirent[c].u2.s.data_is_directory);
-		wr[c].children = fi->first_resource + dirent[c].u2.s.offset_to_directory;
+	out_c = 0;
+	for (dirent_c = 0 ; dirent_c < rescnt ; dirent_c++) {
+		RETURN_IF_BAD_POINTER(NULL, dirent[dirent_c]);
+		wr[out_c].this = pe_res;
+		wr[out_c].level = level;
+		wr[out_c].is_directory = (dirent[dirent_c].u2.s.data_is_directory);
+		/* Require data to point somewhere after the directory */
+		if (dirent[dirent_c].u2.s.offset_to_directory < sizeof(Win32ImageResourceDirectory))
+			continue;
+		wr[out_c].children = fi->first_resource + dirent[dirent_c].u2.s.offset_to_directory;
 
 		/* fill in wr->id, wr->numeric_id */
-		if (!decode_pe_resource_id (fi, wr + c, dirent[c].u1.name))
-			return NULL;
+		if (!decode_pe_resource_id (fi, wr + out_c, dirent[dirent_c].u1.name))
+			continue;
+
+		++out_c;
+		++(*count);
 	}
 
 	return wr;
