@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: icoutils 0.31.3\n"
 "Report-Msgid-Bugs-To: frank.richter@gmail.com\n"
-"POT-Creation-Date: 2017-03-11 14:32+0100\n"
-"PO-Revision-Date: 2017-03-11 14:32+0100\n"
+"POT-Creation-Date: 2017-04-01 18:34+0200\n"
+"PO-Revision-Date: 2017-04-01 18:34+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: en@boldquot\n"
@@ -320,11 +320,11 @@ msgstr "cannot open file"
 msgid "not a png file"
 msgstr "not a png file"
 
-#: icotool/create.c:126 icotool/extract.c:289 icotool/extract.c:464
+#: icotool/create.c:126 icotool/extract.c:293 icotool/extract.c:468
 msgid "cannot initialize PNG library"
 msgstr "cannot initialize PNG library"
 
-#: icotool/create.c:131 icotool/extract.c:294 icotool/extract.c:469
+#: icotool/create.c:131 icotool/extract.c:298 icotool/extract.c:473
 msgid "cannot create PNG info structure - out of memory"
 msgstr "cannot create PNG info structure - out of memory"
 
@@ -333,7 +333,7 @@ msgstr "cannot create PNG info structure - out of memory"
 msgid "cannot decrease bit depth from %d to %d, bit depth not changed"
 msgstr "cannot decrease bit depth from %d to %d, bit depth not changed"
 
-#: icotool/create.c:259 icotool/extract.c:199 icotool/extract.c:303
+#: icotool/create.c:259 icotool/extract.c:199 icotool/extract.c:307
 msgid "cannot create file"
 msgstr "cannot create file"
 
@@ -362,7 +362,7 @@ msgstr "reserved is not zero"
 msgid "PNG too large"
 msgstr "PNG too large"
 
-#: icotool/extract.c:187 icotool/extract.c:354
+#: icotool/extract.c:187 icotool/extract.c:358
 #, c-format
 msgid ""
 "--%s --index=%d --width=%d --height=%d --bit-depth=%<PRIu32> --palette-size="
@@ -371,7 +371,7 @@ msgstr ""
 "--%s --index=%d --width=%d --height=%d --bit-depth=%<PRIu32> --palette-size="
 "%<PRIu32>"
 
-#: icotool/extract.c:191 icotool/extract.c:358
+#: icotool/extract.c:191 icotool/extract.c:362
 #, c-format
 msgid " --hotspot-x=%d --hotspot-y=%d"
 msgstr " --hotspot-x=%d --hotspot-y=%d"
@@ -410,23 +410,27 @@ msgid "palette too large"
 msgstr "palette too large"
 
 #: icotool/extract.c:250
+msgid "invalid bitmap width"
+msgstr "invalid bitmap width"
+
+#: icotool/extract.c:254
 msgid "bitmap width too large"
 msgstr "bitmap width too large"
 
-#: icotool/extract.c:261
+#: icotool/extract.c:265
 #, c-format
 msgid "incorrect total size of bitmap (%d specified; %d real)"
 msgstr "incorrect total size of bitmap (%d specified; %d real)"
 
-#: icotool/extract.c:407
+#: icotool/extract.c:411
 msgid "offset of bitmap header incorrect (too low)"
 msgstr "offset of bitmap header incorrect (too low)"
 
-#: icotool/extract.c:411
+#: icotool/extract.c:415
 msgid "invalid data at expected offset (unrecoverable)"
 msgstr "invalid data at expected offset (unrecoverable)"
 
-#: icotool/extract.c:414
+#: icotool/extract.c:418
 #, c-format
 msgid "skipping %u bytes of garbage at %u"
 msgstr "skipping %u bytes of garbage at %u"
@@ -808,31 +812,36 @@ msgstr "%s: file has a size of 0"
 msgid "%s: --language has no effect because file is 16-bit binary"
 msgstr "%s: --language has no effect because file is 16-bit binary"
 
-#: wrestool/restable.c:129
+#: wrestool/restable.c:98
+#, c-format
+msgid "%s: resource structure malformed"
+msgstr "%s: resource structure malformed"
+
+#: wrestool/restable.c:135
 #, c-format
 msgid "--type=%s --name=%s%s%s [%s%s%soffset=0x%x size=%zu]\n"
 msgstr "--type=%s --name=%s%s%s [%s%s%soffset=0x%x size=%zu]\n"
 
-#: wrestool/restable.c:132
+#: wrestool/restable.c:138
 msgid " --language="
 msgstr " --language="
 
-#: wrestool/restable.c:326
+#: wrestool/restable.c:339
 #, c-format
 msgid "%s: resource table invalid, ignoring remaining entries"
 msgstr "%s: resource table invalid, ignoring remaining entries"
 
-#: wrestool/restable.c:392 wrestool/restable.c:475
+#: wrestool/restable.c:405 wrestool/restable.c:488
 #, c-format
 msgid "%s: not a PE or NE library"
 msgstr "%s: not a PE or NE library"
 
-#: wrestool/restable.c:409
+#: wrestool/restable.c:422
 #, c-format
 msgid "%s: no resource directory found"
 msgstr "%s: no resource directory found"
 
-#: wrestool/restable.c:465
+#: wrestool/restable.c:478
 #, c-format
 msgid "%s: file contains no resources"
 msgstr "%s: file contains no resources"

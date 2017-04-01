@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: icoutils 0.31.3\n"
 "Report-Msgid-Bugs-To: frank.richter@gmail.com\n"
-"POT-Creation-Date: 2017-03-11 14:32+0100\n"
+"POT-Creation-Date: 2017-04-01 18:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -264,11 +264,11 @@ msgstr ""
 msgid "not a png file"
 msgstr ""
 
-#: icotool/create.c:126 icotool/extract.c:289 icotool/extract.c:464
+#: icotool/create.c:126 icotool/extract.c:293 icotool/extract.c:468
 msgid "cannot initialize PNG library"
 msgstr ""
 
-#: icotool/create.c:131 icotool/extract.c:294 icotool/extract.c:469
+#: icotool/create.c:131 icotool/extract.c:298 icotool/extract.c:473
 msgid "cannot create PNG info structure - out of memory"
 msgstr ""
 
@@ -277,7 +277,7 @@ msgstr ""
 msgid "cannot decrease bit depth from %d to %d, bit depth not changed"
 msgstr ""
 
-#: icotool/create.c:259 icotool/extract.c:199 icotool/extract.c:303
+#: icotool/create.c:259 icotool/extract.c:199 icotool/extract.c:307
 msgid "cannot create file"
 msgstr ""
 
@@ -306,14 +306,14 @@ msgstr ""
 msgid "PNG too large"
 msgstr ""
 
-#: icotool/extract.c:187 icotool/extract.c:354
+#: icotool/extract.c:187 icotool/extract.c:358
 #, c-format
 msgid ""
 "--%s --index=%d --width=%d --height=%d --bit-depth=%<PRIu32> --palette-size="
 "%<PRIu32>"
 msgstr ""
 
-#: icotool/extract.c:191 icotool/extract.c:358
+#: icotool/extract.c:191 icotool/extract.c:362
 #, c-format
 msgid " --hotspot-x=%d --hotspot-y=%d"
 msgstr ""
@@ -352,23 +352,27 @@ msgid "palette too large"
 msgstr ""
 
 #: icotool/extract.c:250
+msgid "invalid bitmap width"
+msgstr ""
+
+#: icotool/extract.c:254
 msgid "bitmap width too large"
 msgstr ""
 
-#: icotool/extract.c:261
+#: icotool/extract.c:265
 #, c-format
 msgid "incorrect total size of bitmap (%d specified; %d real)"
 msgstr ""
 
-#: icotool/extract.c:407
+#: icotool/extract.c:411
 msgid "offset of bitmap header incorrect (too low)"
 msgstr ""
 
-#: icotool/extract.c:411
+#: icotool/extract.c:415
 msgid "invalid data at expected offset (unrecoverable)"
 msgstr ""
 
-#: icotool/extract.c:414
+#: icotool/extract.c:418
 #, c-format
 msgid "skipping %u bytes of garbage at %u"
 msgstr ""
@@ -726,31 +730,36 @@ msgstr ""
 msgid "%s: --language has no effect because file is 16-bit binary"
 msgstr ""
 
-#: wrestool/restable.c:129
+#: wrestool/restable.c:98
+#, c-format
+msgid "%s: resource structure malformed"
+msgstr ""
+
+#: wrestool/restable.c:135
 #, c-format
 msgid "--type=%s --name=%s%s%s [%s%s%soffset=0x%x size=%zu]\n"
 msgstr ""
 
-#: wrestool/restable.c:132
+#: wrestool/restable.c:138
 msgid " --language="
 msgstr ""
 
-#: wrestool/restable.c:326
+#: wrestool/restable.c:339
 #, c-format
 msgid "%s: resource table invalid, ignoring remaining entries"
 msgstr ""
 
-#: wrestool/restable.c:392 wrestool/restable.c:475
+#: wrestool/restable.c:405 wrestool/restable.c:488
 #, c-format
 msgid "%s: not a PE or NE library"
 msgstr ""
 
-#: wrestool/restable.c:409
+#: wrestool/restable.c:422
 #, c-format
 msgid "%s: no resource directory found"
 msgstr ""
 
-#: wrestool/restable.c:465
+#: wrestool/restable.c:478
 #, c-format
 msgid "%s: file contains no resources"
 msgstr ""
