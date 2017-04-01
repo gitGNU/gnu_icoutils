@@ -1,3 +1,8 @@
+2017-??-??:
+  Fixed issues found by Jerzy Kramarz:
+   Invalid memory allocation in icotool with malformed input.
+   Infinite recursion in wrestool with malformed input.
+
 2017-03-11: icoutils 0.31.3 released.
   Warning fixes and build improvements from Richard W.M. Jones <rjones@redhat.com>
   Fixed wrestool being broken. Reported by Richard W.M. Jones <rjones@redhat.com>
